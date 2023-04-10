@@ -1,0 +1,44 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.Objects;
+
+public class HidroAvion extends Vehiculo {
+	
+	private Double altura;
+	private Double profundidad;
+	public HidroAvion(Integer codigo, String modelo) {
+		super(codigo, modelo);
+		this.altura = 0.0;
+		this.profundidad = 0.0;
+	}
+	public Double getAltura() {
+		return altura;
+	}
+	public void setAltura(Double altura) {
+		this.altura = altura;
+	}
+	public Double getProfundidad() {
+		return profundidad;
+	}
+	public void setProfundidad(Double profundidad) {
+		this.profundidad = profundidad;
+	}
+	
+	@Override
+	public int hashCode() {
+		int result = super.hashCode();
+	
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		HidroAvion other = (HidroAvion) obj;
+		return Objects.equals(super.getCodigo(), other.getCodigo());
+	}
+}

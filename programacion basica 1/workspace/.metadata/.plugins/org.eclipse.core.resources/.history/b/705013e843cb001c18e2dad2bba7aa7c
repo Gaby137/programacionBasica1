@@ -1,0 +1,8 @@
+package ar.edu.futsal;
+
+public class Evento {
+	private Jugador jugador;
+	private Double minutos;
+
+	private enum Tipo;
+}

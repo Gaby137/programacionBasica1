@@ -1,0 +1,6 @@
+package ar.edu.unlam.pb2.eva02;
+
+public class Anfibio extends Vehiculo {
+	private Double velocidad;
+	private Double profundidad;
+}

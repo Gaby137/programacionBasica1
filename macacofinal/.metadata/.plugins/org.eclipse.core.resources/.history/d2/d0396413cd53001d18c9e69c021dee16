@@ -1,0 +1,79 @@
+package ar.edu.unlam.pb2.eva02;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class FuerzaArmada {
+
+	private Set<Vehiculo> convoy;
+	private Map<String, Batalla> batallas;
+	private Integer capacidadDeDefensa;
+
+	public FuerzaArmada() {
+		super();
+		this.convoy = new HashSet<>();
+		this.batallas = new HashMap<>();
+	}
+
+	public Set<Vehiculo> getConvoy() {
+		return convoy;
+	}
+
+	public void setConvoy(Set<Vehiculo> convoy) {
+		this.convoy = convoy;
+	}
+
+	public Map<String, Batalla> getBatallas() {
+		return batallas;
+	}
+
+	public void setBatallas(Map<String, Batalla> batallas) {
+		this.batallas = batallas;
+	}
+
+	public void agregarVehiculo(Vehiculo vehiculo) {
+		this.convoy.add(vehiculo);
+
+	}
+
+	public Integer getCapacidadDeDefensa() {
+		return this.convoy.size();
+	}
+
+	public void setCapacidadDeDefensa(Integer capacidadDeDefensa) {
+		this.capacidadDeDefensa = capacidadDeDefensa;
+	}
+
+	public void crearBatalla(String nombre, TipoDeBatalla tipo, Double latitud, Double longitud) {
+		this.batallas.put(nombre, new Batalla(latitud, longitud, tipo));
+
+	}
+
+	public Batalla getBatalla(String nombreMap) {
+
+		return this.batallas.get(nombreMap);
+	}
+
+	public Boolean enviarALaBatalla(String nombreMap, Integer codigoVehiculo) {
+		Boolean enviado = false;
+
+		switch (this.batallas.get(nombreMap).getTipo()) {
+		case TERRESTRE:
+			for (Vehiculo vehiculo : this.convoy) {
+				if (vehiculo instanceof Terrestre) {
+					this.batallas.get(nombreMap).getVehiculosEnLaBatalla().add(vehiculo);
+					enviado = true;
+				}
+			}
+			break;
+
+		default:
+			break;
+		}
+
+		return enviado;
+	}
+
+}

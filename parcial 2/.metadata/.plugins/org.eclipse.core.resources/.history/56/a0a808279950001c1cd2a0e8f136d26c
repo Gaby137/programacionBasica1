@@ -1,0 +1,11 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class PolizaAccidentesPersonales extends SegurosDeVida {
+
+	@Override
+	public void agregarBeneficiario(Persona p, TipoDeBeneficiario t) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

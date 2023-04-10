@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;CANT_MAXIMA_JUGADORES&apos; from expression &apos;5&apos;&#x0D;&#x0A;- Original project: &apos;PBI2021Q1Parcial2EnrriquezGabriel&apos;&#x0D;&#x0A;- Constant name: &apos;CANT_MAXIMA_JUGADORES&apos;&#x0D;&#x0A;- Constant expression: &apos;5&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;CANT_MAXIMA_JUGADORES&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src&lt;ar.edu.unlam.pb1.parcial2{EquipoDeFutbol.java" name="CANT_MAXIMA_JUGADORES" qualify="false" replace="false" selection="225 1" stamp="1626214512318" version="1.0" visibility="2"/>
+</session>

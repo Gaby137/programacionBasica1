@@ -1,0 +1,36 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PolizaAccidentesPersonales extends SegurosDeVida {
+	private Integer cont;
+	private Persona persona;
+	private TipoDeBeneficiario tipo;
+	private List<Persona> listaPersonas;
+	public PolizaAccidentesPersonales(Integer numeroDePoliza, Persona asegurado, Double sumaAsegurada, Double prima) {
+		super.setNumeroDePoliza(numeroDePoliza);
+		super.setAsegurado(asegurado);
+		super.setSumaAsegurada(sumaAsegurada);
+		super.setPrima(prima);
+		this.persona= new Persona();
+		this.listaPersonas = new ArrayList<>();
+	}
+	
+	
+	@Override
+	public void agregarBeneficiario(Persona p, TipoDeBeneficiario t) {
+		p.setTipo(t);
+		this.listaPersonas.add(p);
+		
+		cont++;
+	}
+
+
+	@Override
+	public Integer obtenerCantidadDeBeneficiarios() {
+		return listaPersonas.size();
+		
+	}
+
+}

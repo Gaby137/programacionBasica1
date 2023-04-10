@@ -1,0 +1,18 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public enum TipoDeZona {
+//	0% - 50%
+	Descanso, 
+	
+//	50% - 60%
+	Calentamiento, 
+	
+//	60% - 70%
+	Aerobico,
+	
+//	70% - 90%
+	Umbral,
+	
+//	90% - 100%
+	Maximo;
+}

@@ -1,0 +1,30 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class SegurosDeVida { 
+	private int contBeneficiarios;
+	private int premio;
+	
+	public Boolean agregarBeneficiario(Persona hijo, TipoDeBeneficiario hijo2) {
+		Boolean agregado = false;
+		contBeneficiarios++;
+		return agregado;
+		
+		
+	}
+
+	public Object obtenerCantidadDeBeneficiarios() {
+		
+		return contBeneficiarios;
+	}
+
+	public Boolean getAsegurado() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getPremio() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

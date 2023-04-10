@@ -1,0 +1,55 @@
+package ar.edu.transporte;
+
+public abstract class Vehiculo implements Administrable {
+
+	private Persona chofer;
+	private String patente;
+	private Integer kilometrosRecorridos;
+
+	public Vehiculo(String patente) {
+		super();
+		this.chofer = null;
+		this.patente = patente;
+		this.kilometrosRecorridos = 0;
+	}
+
+	public Persona getChofer() {
+		return chofer;
+	}
+
+	public void setChofer(Persona chofer) {
+		this.chofer = chofer;
+	}
+
+	public String getPatente() {
+		return patente;
+	}
+
+	public void setPatente(String patente) {
+		this.patente = patente;
+	}
+
+	public Integer getKilometrosRecorridos() {
+		return kilometrosRecorridos;
+	}
+
+	public void setKilometrosRecorridos(Integer kilometrosRecorridos) {
+		this.kilometrosRecorridos = kilometrosRecorridos;
+	}
+
+
+	public abstract Boolean asignarChofer(Persona chofer);
+
+	@Override
+	public Boolean cambiarChofer(Persona chofer) throws NoSePuedeCambiarChoferException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean agregarAcompaniante(Persona acompaniante) throws ExcedeElLimiteDeAcompaniantesException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

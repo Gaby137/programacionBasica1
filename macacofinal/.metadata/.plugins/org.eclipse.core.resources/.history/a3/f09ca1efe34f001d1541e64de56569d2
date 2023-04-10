@@ -1,0 +1,26 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class PolizaAccidentesPersonales extends Poliza implements SegurosDeVida {
+
+	private Set<Persona> beneficiarios;
+
+	public PolizaAccidentesPersonales(Integer numeroDePoliza, Persona asegurado, Double sumaAsegurada, Double prima) {
+		super(numeroDePoliza, asegurado, sumaAsegurada, prima, prima);
+		this.beneficiarios = new HashSet<>();
+	}
+
+	@Override
+	public void agregarBeneficiario(Persona persona, TipoDeBeneficiario tipo) {
+		this.beneficiarios.put(tipo, persona);
+	}
+
+	@Override
+	public Integer obtenerCantidadDeBeneficiarios() {
+		// TODO Auto-generated method stub
+		return this.beneficiarios.size();
+	}
+
+}

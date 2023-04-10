@@ -1,0 +1,12 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class SegurosGenerales {
+
+	public static final Integer numeroDePoliza;
+
+	public void agregarBienAsegurado(Auto auto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

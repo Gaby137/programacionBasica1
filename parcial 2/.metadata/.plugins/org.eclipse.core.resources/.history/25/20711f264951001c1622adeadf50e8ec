@@ -1,0 +1,37 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class CompaniaDeSeguro{
+	private String nombre;
+	private Integer numeroDePoliza;
+	private Map<Integer, Poliza> autos;
+	public CompaniaDeSeguro(String nombre) {
+		this.nombre=nombre;
+
+		this.autos= new HashMap<numeroDePoliza, Poliza>();
+	
+	}
+	public void agregarPoliza(PolizaDeAuto polizaDeAuto) {
+		this.autos.put(numeroDePoliza, polizaDeAuto);
+		
+	}
+	public void agregarPoliza(PolizaAccidentesPersonales polizaAccidentesPersonales) {
+		this.autos.put(numeroDePoliza, polizaAccidentesPersonales);
+		
+	}
+	public void agregarPoliza(PolizaCombinadoFamiliar polizaCombinadoFamiliar) {
+		this.autos.put(numeroDePoliza, polizaCombinadoFamiliar);
+		
+	}
+	public Integer obtenerLaCantidadDePolizasEmitidas() {
+		// TODO Auto-generated method stub
+		return autos.size();
+	}
+
+
+
+}

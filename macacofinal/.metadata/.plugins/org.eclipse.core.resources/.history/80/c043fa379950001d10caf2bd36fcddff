@@ -1,0 +1,69 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class CompaniaDeSeguro {
+
+	private String nombre;
+	private Set<Poliza> listaDePolizas;
+
+	public CompaniaDeSeguro(String nombre) {
+		super();
+		this.nombre = nombre;
+		this.listaDePolizas = new HashSet<>();
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Set<Poliza> getListaDePolizas() {
+		return listaDePolizas;
+	}
+
+	public void setListaDePolizas(Set<Poliza> listaDePolizas) {
+		this.listaDePolizas = listaDePolizas;
+	}
+
+	public void agregarPoliza(Poliza poliza) {
+		this.listaDePolizas.add(poliza);
+
+	}
+
+	public Integer obtenerLaCantidadDePolizasEmitidas() {
+		// TODO Auto-generated method stub
+		return this.listaDePolizas.size();
+	}
+
+	public void denunciarSiniestro(Integer i) {
+		for (Poliza poliza : listaDePolizas) {
+			if (poliza.getNumeroDePoliza().equals(i)) {
+				if (poliza instanceof PolizaDeAuto) {
+					((PolizaDeAuto) poliza).setFueRobado(true);
+				}
+				else if (poliza instanceof PolizaAccidentesPersonales) {
+					
+				}
+				}
+			}
+		}
+
+	}
+
+	public Poliza getPoliza(Integer i) {
+		Poliza p = null;
+		for (Poliza poliza : listaDePolizas) {
+			if (poliza.getNumeroDePoliza().equals(i)) {
+				p = poliza;
+
+			}
+		}
+		return p;
+	}
+
+}

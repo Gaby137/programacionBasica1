@@ -1,0 +1,13 @@
+package ar.edu.unlam.pb2.eva02;
+
+public class Anfibio extends Vehiculo {
+	private Double velocidad;
+	private Double profundidad;
+	public Anfibio(Integer codigo, String modelo) {
+		super(codigo, modelo);
+		this.velocidad = 0.0;
+		this.profundidad = 0.0;
+	}
+	
+	
+}

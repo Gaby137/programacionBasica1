@@ -1,0 +1,37 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public class Pedal extends Sensor {
+	public static final double LONGITUD_DE_PEDALEO_PROM = 0.89;
+	private int cantDePedaleo;
+
+	public Pedal(int frencuenciaCardiaca) {
+		super(frencuenciaCardiaca);
+
+		this.cantDePedaleo = 0;
+	}
+
+	@Override
+	public void recibirUnPulso() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void recibirUnPulsoGPS() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public double calcularVelocidad() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double calcularCadencia() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

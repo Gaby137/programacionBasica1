@@ -1,0 +1,16 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class PasoTest {
+
+	@Test
+	public void pruebaQueDaPasos() {
+		Paso p1 = new Paso(100);
+		p1.darPaso();
+		assertTrue(p1.isPulso());
+	}
+
+}

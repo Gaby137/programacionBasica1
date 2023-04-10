@@ -1,0 +1,30 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public class Nadador extends Deportista {
+<<<<<<< HEAD
+	
+	public Nadador() {
+		super();
+=======
+	private ZonaDeFrecuenciaCardiaca zonaDeFrecuanciaCardiacaActual;
+
+	public Nadador(ZonaDeFrecuenciaCardiaca zonaDeFrecuanciaCardiacaActual, String nombre, Integer edadActual, Double pesoActual, Double alturaActual) {
+		super(nombre, edadActual,pesoActual,alturaActual);
+		setTipoDeDisciplina(Disciplina.NATACION);
+		this.zonaDeFrecuanciaCardiacaActual = zonaDeFrecuanciaCardiacaActual;
+>>>>>>> 6927d25ac62fbeffcff8ffc5af15ce307f71c5e3
+	}
+
+	public Nadador(String nombre, Integer edadActual, Double pesoActual, Double alturaActual, Integer pasosDiarios,
+			Disciplina tipoDeDisciplina) {
+		super(nombre, edadActual, pesoActual, alturaActual, pasosDiarios, tipoDeDisciplina);
+		setTipoDeDisciplina(Disciplina.NATACION);
+	}
+
+	public double ritmo(double x) {
+		return 0.0;
+	}
+
+	
+	
+}

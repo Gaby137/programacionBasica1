@@ -1,0 +1,6 @@
+package ar.edu.banco;
+
+public class Cliente {
+	private Integer dni;
+	private String nombre;
+}

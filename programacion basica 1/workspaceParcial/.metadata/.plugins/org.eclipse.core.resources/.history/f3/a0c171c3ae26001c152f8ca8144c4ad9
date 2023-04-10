@@ -1,0 +1,21 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public class Deportista {
+	private String nombre;
+	private int edadActual;
+	private double pesoActual;
+	private double alturaActual;
+	private int pasosDiarios;
+
+	public double distanciaRecorrida(double x) {
+		return 0.0;
+	}
+	
+	public void tiempoTrascurrido() {
+		
+	}
+	
+	public double calcularElRitmo() {
+		return 0.0;
+	}
+}

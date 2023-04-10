@@ -1,0 +1,29 @@
+package ar.edu.banco;
+
+public class CuentaCorriente extends Cuenta {
+
+	private Double deuda;
+	private Double descubierto;
+
+	static final Double MAXIMO_DESCUBIERTO = 150.0;
+
+	public CuentaCorriente(Long cbu) {
+		super(cbu);
+		this.deuda = 0.0;
+		this.descubierto = 0.0;
+	}
+
+	@Override
+	public void depositar(Double monto) {
+		if (this.deuda > 0.0) {
+			monto -= deuda;
+		}
+	}
+
+	@Override
+	public Boolean extraer(Double monto) throws SaldoInsuficienteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

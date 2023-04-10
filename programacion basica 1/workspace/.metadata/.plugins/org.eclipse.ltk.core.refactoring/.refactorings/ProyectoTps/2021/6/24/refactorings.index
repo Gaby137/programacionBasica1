@@ -1,0 +1,7 @@
+1623159527373	Copy package
+1623162149792	Extract method 'ingresoOpcionPotencia'
+1623162216630	Extract method 'ingresoOpcionSumatoriaLimite'
+1623162248236	Extract method 'ingresoOpcionSumatoriaInfSup'
+1623197166332	Rename local variable 'sumador3'
+1623358665806	Copy package
+1623371781219	Extract method 'menu'

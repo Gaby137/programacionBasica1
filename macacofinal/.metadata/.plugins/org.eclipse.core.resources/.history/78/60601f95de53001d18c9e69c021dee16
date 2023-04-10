@@ -1,0 +1,13 @@
+package ar.edu.banco;
+
+public abstract class Cuenta {
+	private Long cbu;
+	private Double saldo;
+
+	public Cuenta(Long cbu) {
+		super();
+		this.cbu = cbu;
+		this.saldo = 0.0;
+	}
+
+}

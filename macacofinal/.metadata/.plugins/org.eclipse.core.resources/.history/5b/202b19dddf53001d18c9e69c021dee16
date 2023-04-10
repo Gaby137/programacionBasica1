@@ -1,0 +1,22 @@
+package ar.edu.banco;
+
+public class CuentaAhorro extends Cuenta {
+
+	private final Integer MAXIMA_EXTRACCION = 5;
+
+	public CuentaAhorro(Long cbu) {
+		super(cbu);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Boolean extraer(Double monto) throws SaldoInsuficienteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Integer getMAXIMA_EXTRACCION() {
+		return MAXIMA_EXTRACCION;
+	}
+
+
+}

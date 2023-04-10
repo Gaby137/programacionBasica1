@@ -1,0 +1,68 @@
+package ar.edu.transporte;
+
+import java.util.Objects;
+
+public abstract class Vehiculo {
+
+	
+
+	private Persona chofer;
+	private String patente;
+	private Integer kilometrosRecorridos;
+
+	public Vehiculo(String patente) {
+		super();
+		this.chofer = null;
+		this.patente = patente;
+		this.kilometrosRecorridos = 0;
+	}
+
+	public Persona getChofer() {
+		return chofer;
+	}
+
+	public void setChofer(Persona chofer) {
+		this.chofer = chofer;
+	}
+
+	public String getPatente() {
+		return patente;
+	}
+
+	public void setPatente(String patente) {
+		this.patente = patente;
+	}
+
+	public Integer getKilometrosRecorridos() {
+		return kilometrosRecorridos;
+	}
+
+	public void setKilometrosRecorridos(Integer kilometrosRecorridos) {
+		this.kilometrosRecorridos = kilometrosRecorridos;
+	}
+	
+
+	public abstract Boolean asignarChofer(Persona chofer);
+
+	public abstract Boolean cambiarChofer(Persona chofer) throws NoSePuedeCambiarChoferException;
+
+	public abstract Boolean agregarAcompaniante(Persona acompaniante) throws ExcedeElLimiteDeAcompaniantesException;
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(patente);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vehiculo other = (Vehiculo) obj;
+		return Objects.equals(patente, other.patente);
+	}
+
+}

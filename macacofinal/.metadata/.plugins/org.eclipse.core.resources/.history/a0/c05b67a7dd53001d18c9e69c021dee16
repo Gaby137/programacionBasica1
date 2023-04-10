@@ -1,0 +1,9 @@
+package ar.edu.banco;
+
+import java.util.Set;
+
+public class Banco {
+	private String nombre;
+	private Set<Cliente> listaDeClientes;
+
+}

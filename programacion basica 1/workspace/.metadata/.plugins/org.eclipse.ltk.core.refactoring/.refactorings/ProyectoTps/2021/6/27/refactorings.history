@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;ar.edu.unlam.pb1.trabajoPractico09&apos; to &apos;ProyectoTps/prueba&apos;&#x0D;&#x0A;- Original project: &apos;ProyectoTps&apos;&#x0D;&#x0A;- Destination element: &apos;ProyectoTps/prueba&apos;&#x0D;&#x0A;- Original element: &apos;ProyectoTps/src/ar.edu.unlam.pb1.trabajoPractico09&apos;" description="Copy package" destination="/prueba" element1="/src&lt;ar.edu.unlam.pb1.trabajoPractico09" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1624895004356" version="1.0"/>
+</session>

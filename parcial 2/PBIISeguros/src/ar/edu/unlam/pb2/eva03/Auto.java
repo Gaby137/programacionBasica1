@@ -1,0 +1,18 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class Auto {
+	private String marca;
+	private String modelo;
+	private Integer anio;
+	private Double precio;
+	public Auto(String marca, String modelo, Integer anio, Double precio) {
+		this.marca=marca;
+		this.modelo=modelo;
+		this.anio=anio;
+		this.precio=precio;
+	}
+	public Auto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

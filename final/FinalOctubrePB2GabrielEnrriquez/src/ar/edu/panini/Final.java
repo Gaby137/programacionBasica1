@@ -1,0 +1,52 @@
+package ar.edu.panini;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Final extends Usuario {
+	private List<Figurita> stock;
+	private Set<Figurita> album;
+	public Final(Integer dni, String nombre) {
+		super(dni, nombre);
+		this.stock = new ArrayList<>();
+		this.album = new HashSet<>();
+	}
+	@Override
+	public Boolean agregarFigurita(Figurita figurita) {
+		Boolean agregado = false;
+		
+		if (figurita != null) {
+			this.stock.add(figurita);
+			agregado = true;
+		}
+		return agregado;
+	}
+	
+	public Boolean pegarFigurita(Figurita figurita) throws FiguritaRepetida {
+		Boolean agregado = false;
+				if (!this.album.contains(figurita)) {
+					this.album.add(figurita);
+					this.stock.remove(figurita);
+				}else {
+					throw new FiguritaRepetida("figurita repetida");
+				}
+				
+		return agregado;
+	}
+	public List<Figurita> getStock() {
+		return stock;
+	}
+	public void setStock(List<Figurita> stock) {
+		this.stock = stock;
+	}
+	public Set<Figurita> getAlbum() {
+		return album;
+	}
+	public void setAlbum(Set<Figurita> album) {
+		this.album = album;
+	}
+	
+	
+}

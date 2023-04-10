@@ -1,0 +1,26 @@
+package ar.edu.unlam.pbII.cuenta;
+
+public class CuentaSueldo extends Cuenta{
+
+	public CuentaSueldo(Integer cbu, Double saldo) {
+		super(cbu, saldo);
+		setTipoCuenta(TipoCuenta.SUELDO);
+	}
+
+	@Override
+	public TipoCuenta getTipoCuenta() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean extraerDinero(Double monto) {
+		if (monto<= getSaldo()) {
+			
+		}
+		return null;
+	}
+
+	
+
+}

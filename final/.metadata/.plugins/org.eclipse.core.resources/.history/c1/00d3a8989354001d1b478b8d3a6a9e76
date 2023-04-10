@@ -1,0 +1,32 @@
+package ar.edu.panini;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Final extends Usuario {
+	private List<Figurita> stock;
+	private Set<Figurita> album;
+	public Final(Integer dni, String nombre) {
+		super(dni, nombre);
+		this.stock = new ArrayList<>();
+		this.album = new HashSet<>();
+	}
+	@Override
+	public Boolean agregarFigurita(Figurita figurita) {
+		Boolean agregado = false;
+		
+		if (figurita != null) {
+			this.stock.add(figurita);
+		}
+		return agregado;
+	}
+	
+	public Boolean pegarFigurita(Figurita figurita) {
+		Boolean agregado = false;
+				
+				
+		return agregado;
+	}
+}

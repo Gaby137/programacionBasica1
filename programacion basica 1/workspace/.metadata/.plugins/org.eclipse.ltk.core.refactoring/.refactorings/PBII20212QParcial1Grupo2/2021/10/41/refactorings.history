@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;ar.edu.unlam.pb2.smartwatch&apos; to &apos;PBII20212QParcial1Grupo2/test&apos;&#x0D;&#x0A;- Original project: &apos;PBII20212QParcial1Grupo2&apos;&#x0D;&#x0A;- Destination element: &apos;PBII20212QParcial1Grupo2/test&apos;&#x0D;&#x0A;- Original element: &apos;PBII20212QParcial1Grupo2/src/ar.edu.unlam.pb2.smartwatch&apos;" description="Copy package" destination="/test" element1="/src&lt;ar.edu.unlam.pb2.smartwatch" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1633522690791" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class PolizaAccidentesPersonales extends SegurosDeVida {
+
+	public PolizaAccidentesPersonales(Integer nUMERO_DE_POLIZA, Persona asegurado, Double sUMA_ASEGURADA,
+			Double pRIMA) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

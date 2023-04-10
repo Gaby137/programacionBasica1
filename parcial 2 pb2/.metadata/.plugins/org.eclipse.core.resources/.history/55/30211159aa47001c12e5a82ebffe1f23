@@ -1,0 +1,16 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class SegurosDeVida extends SegurosGenerales{ 
+	
+	private Integer premio;
+	
+
+
+
+	public void setPremio(Integer premio) {
+		this.premio = premio;
+	}
+
+
+	
+}

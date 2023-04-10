@@ -1,0 +1,22 @@
+1633523123739	Copy package
+1633524181702	Rename type 'Deporte'
+1633524192684	Rename type 'DeporteTest'
+1633645076580	Rename type 'Pedal'
+1633660992911	Extract constant 'KARVONEN_220'
+1633666992013	Move compilation unit
+1633666998018	Move compilation unit
+1633667001460	Delete element
+1633668015643	Move compilation unit
+1633668145655	Rename package 'ar.edu.unlam.pb2.smartwatch'
+1633668161433	Rename package 'ar.edu.unlam.pb2.smartwatch'
+1633668212948	Copy package
+1633668249334	Move compilation unit
+1633668253310	Move compilation unit
+1633668258299	Move compilation unit
+1633668263083	Move compilation unit
+1633668276149	Move compilation unit
+1633668282982	Move compilation unit
+1633815886847	Rename type 'CorredorTest'
+1633816508162	Rename type 'TestCaminador'
+1633816522190	Rename type 'TestNadador'
+1633816882841	Delete element

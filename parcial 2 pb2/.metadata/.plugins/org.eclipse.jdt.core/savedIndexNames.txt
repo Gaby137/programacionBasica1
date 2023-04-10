@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\lucas\Desktop\parcial 2 pb2\.metadata\.plugins\org.eclipse.jdt.core
+1408101.index
+1210658807.index
+2495183229.index
+2774387233.index

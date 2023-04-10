@@ -1,0 +1,4 @@
+1633380968211	Copy package
+1633384188395	Rename type 'Cliente'
+1633384693368	Rename field 'tam'
+1633394775331	Extract constant 'TAM'

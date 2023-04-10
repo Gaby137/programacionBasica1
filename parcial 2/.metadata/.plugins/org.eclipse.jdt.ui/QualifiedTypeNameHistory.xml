@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.Persona"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.TipoDeBeneficiario"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.InterfazBeneficio"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.PolizaCombinadoFamiliar"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.PolizaAccidentesPersonales"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.PolizaDeAuto"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.eva03.Poliza"/>
+</qualifiedTypeNameHistroy>

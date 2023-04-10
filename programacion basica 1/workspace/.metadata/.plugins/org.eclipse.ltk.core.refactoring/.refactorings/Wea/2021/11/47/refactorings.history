@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;ar.edu.wea&apos; to &apos;Wea/test&apos;&#x0D;&#x0A;- Original project: &apos;Wea&apos;&#x0D;&#x0A;- Destination element: &apos;Wea/test&apos;&#x0D;&#x0A;- Original element: &apos;Wea/src/ar.edu.wea&apos;" description="Copy package" destination="/test" element1="/src&lt;ar.edu.wea" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1637117501763" version="1.0"/>
+</session>

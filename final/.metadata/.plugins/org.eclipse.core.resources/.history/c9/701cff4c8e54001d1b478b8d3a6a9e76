@@ -1,0 +1,20 @@
+package ar.edu.panini;
+
+public class Figurita {
+	private Integer codigo;
+	private char letraGrupoAlQuePertenece;
+	private String seleccion;
+	private String nombreDelJugador;
+	private Double valorDelJugador;
+	public Figurita(Integer codigo, char letraGrupoAlQuePertenece, String seleccion, String nombreDelJugador,
+			Double valorDelJugador) {
+		super();
+		this.codigo = codigo;
+		this.letraGrupoAlQuePertenece = letraGrupoAlQuePertenece;
+		this.seleccion = seleccion;
+		this.nombreDelJugador = nombreDelJugador;
+		this.valorDelJugador = valorDelJugador;
+	}
+	
+	
+}

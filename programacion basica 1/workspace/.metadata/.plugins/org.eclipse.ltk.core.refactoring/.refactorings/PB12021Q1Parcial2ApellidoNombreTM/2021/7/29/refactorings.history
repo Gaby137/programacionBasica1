@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;CANT_JUGADORES_VALIDOS&apos; from expression &apos;11&apos;&#x0D;&#x0A;- Original project: &apos;PB12021Q1Parcial2ApellidoNombreTM&apos;&#x0D;&#x0A;- Constant name: &apos;CANT_JUGADORES_VALIDOS&apos;&#x0D;&#x0A;- Constant expression: &apos;11&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;CANT_JUGADORES_VALIDOS&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src&lt;ar.edu.unlam.interfaz{TestPartidoFutbol.java" name="CANT_JUGADORES_VALIDOS" qualify="false" replace="false" selection="3313 2" stamp="1626210104405" version="1.0" visibility="2"/>
+</session>

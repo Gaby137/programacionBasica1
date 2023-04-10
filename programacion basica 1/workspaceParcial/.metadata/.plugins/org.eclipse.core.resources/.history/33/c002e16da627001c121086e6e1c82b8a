@@ -1,0 +1,16 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public abstract class Sensor {
+	private double velocidad;
+	private double cadencia;
+	private int frecuenciaCardiaca;
+	private int tiempoSeg;
+	private int metros;
+
+	public abstract void recibirUnPulso();
+
+	public abstract void recibirUnPulsoGPS();
+
+	public abstract void darPulso();
+
+}

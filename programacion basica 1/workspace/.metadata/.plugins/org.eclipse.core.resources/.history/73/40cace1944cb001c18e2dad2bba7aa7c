@@ -1,0 +1,20 @@
+package ar.edu.futsal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Equipo {
+	private List<Jugador> listaJugadores;
+	private List<Evento> goles;
+	private List<Evento> amonestado;
+	private List<Evento> expulsados;
+
+	public Equipo() {
+		super();
+		this.listaJugadores = new ArrayList<>();
+		this.goles = new ArrayList<>();
+		this.amonestado = new ArrayList<>();
+		this.expulsados = new ArrayList<>();
+	}
+
+}

@@ -1,0 +1,67 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public abstract class Deportista {
+	private String nombre;
+	private int edadActual;
+	private double pesoActual;
+	private double alturaActual;
+	private int pasosDiarios;
+	protected Disciplina tipoDeDisciplina;
+	
+	public Deportista() {
+		
+	}
+
+	public double distanciaRecorrida(double x) {
+		return 0.0;
+	}
+
+	public void tiempoTrascurrido() {
+
+	}
+
+	public double calcularElRitmo() {
+		return 0.0;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdadActual() {
+		return edadActual;
+	}
+
+	public void setEdadActual(int edadActual) {
+		this.edadActual = edadActual;
+	}
+
+	public double getPesoActual() {
+		return pesoActual;
+	}
+
+	public void setPesoActual(double pesoActual) {
+		this.pesoActual = pesoActual;
+	}
+
+	public double getAlturaActual() {
+		return alturaActual;
+	}
+
+	public void setAlturaActual(double alturaActual) {
+		this.alturaActual = alturaActual;
+	}
+
+	public int getPasosDiarios() {
+		return pasosDiarios;
+	}
+
+	public void setPasosDiarios(int pasosDiarios) {
+		this.pasosDiarios = pasosDiarios;
+	}
+
+}

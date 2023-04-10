@@ -1,0 +1,43 @@
+package ar.edu.panini;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Panini {
+	private Set<Usuario> listaDeUsuarios;
+	private String nombre;
+	public Panini(String nombre) {
+		super();
+		this.listaDeUsuarios = new HashSet<>();
+		this.nombre = nombre;
+	}
+	
+	public Boolean agregarUsuario(Usuario user) {
+		return this.listaDeUsuarios.add(user);
+	}
+	
+	public Boolean intercambioDeFiguritas(Final u1, Figurita figuritaAIntercambiar, Final u2) {
+		Boolean intercambiado = false;
+			if () {
+				
+			}
+		return intercambiado;
+	}
+	
+	
+	
+	public Set<Usuario> getListaDeUsuarios() {
+		return listaDeUsuarios;
+	}
+	public void setListaDeUsuarios(Set<Usuario> listaDeUsuarios) {
+		this.listaDeUsuarios = listaDeUsuarios;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class Auto {
+	private String marca;
+	private String modelo;
+	private Integer anio;
+	private final Double SUMA_ASEGURADA;
+
+	public Auto(String marca, String modelo, Integer anio, Double sUMA_ASEGURADA) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anio = anio;
+		SUMA_ASEGURADA = sUMA_ASEGURADA;
+	}
+
+}

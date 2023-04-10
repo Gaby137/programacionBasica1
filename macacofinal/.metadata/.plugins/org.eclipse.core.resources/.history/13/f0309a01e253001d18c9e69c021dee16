@@ -1,0 +1,12 @@
+package ar.edu.banco;
+
+public class CuentaCorriente extends Cuenta {
+	private Double deuda;
+	private Double descubierto;
+	@Override
+	public Boolean extraer(Double monto) throws SaldoInsuficienteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

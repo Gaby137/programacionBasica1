@@ -1,0 +1,35 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class PasoTest {
+
+	@Test
+	public void pruebaQueDaPasos() {
+		Paso p1 = new Paso(100);
+		p1.darPaso();
+		assertTrue(p1.isPulso());
+	}
+
+	@Test
+	public void pruebaDeCadenciaYRealiza60Pasos() {
+		Paso p2 = new Paso(100);
+		for (int i = 0; i < 60; i++) {
+			p2.darPaso();
+		}
+		assertEquals(p2.getCantPasos(), 60);
+		assertEquals(p2.getCadencia(), 60, 0);
+	}
+
+	public void pruebaDeCadenciaYRealiza50Pasos() {
+		Paso p2 = new Paso(100);
+		for (int i = 0; i < 50; i++) {
+			p2.darPaso();
+		}
+		assertEquals(p2.getCantPasos(), 60);
+		assertEquals(p2.getCadencia(), 60, 0);
+	}
+}

@@ -1,0 +1,14 @@
+package ar.edu.panini;
+
+import java.util.Set;
+
+public class Administrador extends Usuario {
+	private Set<Figurita> listaDeAltaDeFiguritas;
+
+	public Administrador(Integer dni, String nombre) {
+		super(dni, nombre);
+		this.listaDeAltaDeFiguritas = listaDeAltaDeFiguritas;
+	}
+	
+	
+} 

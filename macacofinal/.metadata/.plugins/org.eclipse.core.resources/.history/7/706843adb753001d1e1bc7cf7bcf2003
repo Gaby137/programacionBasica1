@@ -1,0 +1,11 @@
+package ar.edu.transporte;
+
+public interface Administrable {
+
+	public Boolean asignarChofer(Persona chofer);
+
+	public Boolean cambiarChofer(Persona chofer) throws NoSePuedeCambiarChoferException;
+
+	public Boolean agregarAcompaniante(Persona acompaniante) throws ExcedeElLimiteDeAcompaniantesException;
+
+}

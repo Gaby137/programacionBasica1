@@ -1,0 +1,21 @@
+package ar.edu.panini;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Administrador extends Usuario {
+	private Set<Figurita> listaDeAltaDeFiguritas;
+
+	public Administrador(Integer dni, String nombre) {
+		super(dni, nombre);
+		this.listaDeAltaDeFiguritas = new HashSet<>();
+	}
+
+	@Override
+	public Boolean agregarFigurita(Figurita figurita) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+} 

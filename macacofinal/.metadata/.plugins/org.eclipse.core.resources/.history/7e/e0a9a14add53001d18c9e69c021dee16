@@ -1,0 +1,17 @@
+package ar.edu.banco;
+
+import java.util.List;
+
+public class Cliente {
+	private Integer dni;
+	private String nombre;
+	private List<Cuenta> listaDeCuentas;
+	public Cliente(Integer dni, String nombre, List<Cuenta> listaDeCuentas) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		this.listaDeCuentas = listaDeCuentas;
+	}
+	
+	
+}

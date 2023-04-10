@@ -1,0 +1,6 @@
+package ar.edu.panini;
+
+public class Figurita {
+	private Integer codigo;
+	private char letraGrupoAlQuePertenece; 
+}

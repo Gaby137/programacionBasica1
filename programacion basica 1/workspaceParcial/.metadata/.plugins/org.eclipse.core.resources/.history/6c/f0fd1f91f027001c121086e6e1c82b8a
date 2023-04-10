@@ -1,0 +1,15 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class PedaleoTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

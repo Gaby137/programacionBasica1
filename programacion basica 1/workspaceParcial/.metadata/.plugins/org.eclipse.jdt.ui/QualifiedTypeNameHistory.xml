@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.Pedaleo"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.TipoDeZona"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.Paso"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.TipoDeZona"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.ZonaDeFrecuenciaCardiaca"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.Deportista"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.Runner"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.Ciclista"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.deportista.Caminador"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.sensor.Paso"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.sensor.Brazada"/>
+    <fullyQualifiedTypeName name="ar.edu.unlam.pb2.smartwatch.sensor.Pedaleo"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,5 @@
+package ar.edu.panini;
+
+public class Administrador extends Usuario {
+
+}

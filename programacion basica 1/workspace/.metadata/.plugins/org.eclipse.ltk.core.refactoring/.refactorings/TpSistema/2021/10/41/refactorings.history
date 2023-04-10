@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;ar.edu.sistema&apos; to &apos;TpSistema/test&apos;&#x0D;&#x0A;- Original project: &apos;TpSistema&apos;&#x0D;&#x0A;- Destination element: &apos;TpSistema/test&apos;&#x0D;&#x0A;- Original element: &apos;TpSistema/src/ar.edu.sistema&apos;" description="Copy package" destination="/test" element1="/src&lt;ar.edu.sistema" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1633461517953" version="1.0"/>
+</session>

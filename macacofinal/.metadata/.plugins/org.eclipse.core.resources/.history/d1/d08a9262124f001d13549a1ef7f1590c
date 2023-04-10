@@ -1,0 +1,45 @@
+package ar.edu.hospital;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Plato {
+
+	private String nombre;
+	private List<Ingrediente> listaDeIngredientes;
+	private Tipo_Elaboracion elaboracion;
+
+	public Plato(String nombre, Tipo_Elaboracion elaboracion) {
+		super();
+		this.nombre = nombre;
+		this.listaDeIngredientes = new ArrayList<>();
+		this.elaboracion = elaboracion;
+	}
+
+	public void agregarIngrediente (Ingrediente ingrediente) {
+		this.listaDeIngredientes.add(ingrediente);
+	}
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public List<Ingrediente> getListaDeIngredientes() {
+		return listaDeIngredientes;
+	}
+
+	public void setListaDeIngredientes(List<Ingrediente> listaDeIngredientes) {
+		this.listaDeIngredientes = listaDeIngredientes;
+	}
+
+	public Tipo_Elaboracion getElaboracion() {
+		return elaboracion;
+	}
+
+	public void setElaboracion(Tipo_Elaboracion elaboracion) {
+		this.elaboracion = elaboracion;
+	}
+}

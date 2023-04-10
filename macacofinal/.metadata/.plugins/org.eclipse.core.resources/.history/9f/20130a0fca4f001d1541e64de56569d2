@@ -1,0 +1,44 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class Poliza {
+
+	
+
+	private final Integer numeroDePoliza;
+	private Persona asegurado;
+	private final Double SUMA_ASEGURADA;
+	private final Double prima;
+	private final Double premio;
+
+	public Poliza(Integer NUMERO_DE_POLIZA, Persona asegurado, Double SUMA_ASEGURADA, Double PRIMA, Double premio) {
+		this.numeroDePoliza = NUMERO_DE_POLIZA;
+		this.asegurado = asegurado;
+		this.SUMA_ASEGURADA = SUMA_ASEGURADA;
+		this.prima = PRIMA;
+		this.premio = premio;
+	}
+
+	public Persona getAsegurado() {
+		return asegurado;
+	}
+
+	public void setAsegurado(Persona asegurado) {
+		this.asegurado = asegurado;
+	}
+
+	public Integer getNumeroDePoliza() {
+		return numeroDePoliza;
+	}
+
+	public Double getSUMA_ASEGURADA() {
+		return SUMA_ASEGURADA;
+	}
+
+	public Double getPrima() {
+		return prima;
+	}
+	public Double getPremio() {
+		return premio;
+	}
+	
+}

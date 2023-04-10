@@ -1,0 +1,11 @@
+package ar.edu.futsal;
+
+public class Jugador {
+
+	private String nombre;
+	private String apellido;
+	private Double precio;
+	private Integer edad;
+	
+	
+}

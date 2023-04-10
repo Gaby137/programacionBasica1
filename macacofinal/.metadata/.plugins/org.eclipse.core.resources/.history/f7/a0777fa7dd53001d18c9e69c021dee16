@@ -1,0 +1,27 @@
+package ar.edu.banco;
+
+import java.util.Set;
+
+public class Banco {
+
+	private String nombre;
+	private Set<Cliente> listaDeClientes;
+	public Banco(String nombre, Set<Cliente> listaDeClientes) {
+		super();
+		this.nombre = nombre;
+		this.listaDeClientes = listaDeClientes;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public Set<Cliente> getListaDeClientes() {
+		return listaDeClientes;
+	}
+	public void setListaDeClientes(Set<Cliente> listaDeClientes) {
+		this.listaDeClientes = listaDeClientes;
+	}
+}

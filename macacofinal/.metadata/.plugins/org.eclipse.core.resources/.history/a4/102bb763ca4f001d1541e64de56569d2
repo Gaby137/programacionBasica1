@@ -1,0 +1,22 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class PolizaDeAuto extends Poliza {
+
+	private Auto auto;
+
+	
+
+	public void agregarBienAsegurado(Auto auto) {
+		this.setAuto(auto);
+
+	}
+
+	public Auto getAuto() {
+		return auto;
+	}
+
+	public void setAuto(Auto auto) {
+		this.auto = auto;
+	}
+
+}

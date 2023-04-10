@@ -1,0 +1,180 @@
+package ar.edu.transporte;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+public class PruebaTransporte {
+
+	@Test
+	public void queUnaMotocicletaSePuedaAgregarChoferYAcompaniante() throws ExcedeElLimiteDeAcompaniantesException {
+		// instanciacion
+		Set<Vehiculo> lv = new HashSet<>();
+
+		Vehiculo moto = new Motocicleta("1SFF");
+		Vehiculo ab = new Motocicleta("hjhjhj");
+		lv.add(moto);
+		lv.add(ab);
+
+		assertEquals(2, lv.size());
+
+		Persona p1 = new Persona(1, "pepe");
+		Persona p2 = new Persona(2, "pepe");
+
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(moto.asignarChofer(p1));
+		// ESTE SERIA OTRO TEST CON EL CAMBIO DE CHOFER
+		/// assertTrue(moto.asignarCambiarChofer(p3));
+
+		assertTrue(moto.agregarAcompaniante(p2));
+// TEST DONDE NO PUEDE CAMBIAR DE COFER SI HAY ACOMPAÑANTE
+		// assertFalse(moto.asignarCambiarChofer(p4));
+	}
+
+	@Test(expected = NoSePuedeCambiarChoferException.class)
+	public void queNoSePuedaCambiarChoferSiHayAcompañanteEnMotocicleta() throws NoSePuedeCambiarChoferException {
+		// instanciacion
+		Motocicleta moto = new Motocicleta("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+		Persona p2 = new Persona(2, "pepe");
+
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(moto.asignarChofer(p1));
+
+		assertTrue(moto.agregarAcompaniante(p2));
+
+		moto.cambiarChofer(p3);
+
+	}
+
+	@Test
+	public void queUnAutobusSePuedaAgregarChoferYAcompaniantes() {
+		// instanciacion
+		Autobus autobus = new Autobus("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+		Persona p2 = new Persona(2, "pepe");
+
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(autobus.asignarChofer(p1));
+		assertEquals("pepe", autobus.getChofer().getNombre());
+
+		assertTrue(autobus.agregarAcompaniante(p2));
+		assertTrue(autobus.agregarAcompaniante(p3));
+
+	}
+
+	@Test(expected = NoSePuedeCambiarChoferException.class)
+	public void queNoSePuedaCambiarChoferSiHayAcompañantesEnAutobus() throws NoSePuedeCambiarChoferException {
+		// instanciacion
+		Autobus autobus = new Autobus("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+		Persona p2 = new Persona(2, "pepe");
+
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(autobus.asignarChofer(p1));
+
+		assertTrue(autobus.agregarAcompaniante(p2));
+		assertTrue(autobus.agregarAcompaniante(p3));
+
+		autobus.cambiarChofer(p4);
+
+	}
+
+	@Test
+	public void queUnAutomovilSePuedaAgregarChoferYAcompaniantes()
+			throws NoSePuedeCambiarChoferException, ExcedeElLimiteDeAcompaniantesException {
+		// instanciacion
+		Automovil automovil = new Automovil("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+
+		Persona p2 = new Persona(2, "pepe");
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+
+		Persona p5 = new Persona(5, "pepe");
+
+		Persona p6 = new Persona(6, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(automovil.asignarChofer(p1));
+
+		assertTrue(automovil.agregarAcompaniante(p2));
+		assertTrue(automovil.agregarAcompaniante(p3));
+		assertTrue(automovil.agregarAcompaniante(p4));
+
+	}
+
+	@Test(expected = NoSePuedeCambiarChoferException.class)
+	public void queNoSePuedaCambiarChoferSiHayAcompañantesEnAutomovil()
+			throws NoSePuedeCambiarChoferException, ExcedeElLimiteDeAcompaniantesException {
+		// instanciacion
+		Automovil automovil = new Automovil("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+
+		Persona p2 = new Persona(2, "pepe");
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+
+		Persona p5 = new Persona(5, "pepe");
+
+		Persona p6 = new Persona(6, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(automovil.asignarChofer(p1));
+
+		assertTrue(automovil.agregarAcompaniante(p2));
+		assertTrue(automovil.agregarAcompaniante(p3));
+		assertTrue(automovil.agregarAcompaniante(p4));
+
+		automovil.cambiarChofer(p5);
+	}
+
+	@Test(expected = ExcedeElLimiteDeAcompaniantesException.class)
+	public void queNoSePuedaMasDe3AcompaniantesEnAutomovil()
+			throws NoSePuedeCambiarChoferException, ExcedeElLimiteDeAcompaniantesException {
+		// instanciacion
+		Automovil automovil = new Automovil("1SFF");
+		Persona p1 = new Persona(1, "pepe");
+
+		Persona p2 = new Persona(2, "pepe");
+		Persona p3 = new Persona(3, "pepe");
+		Persona p4 = new Persona(4, "pepe");
+
+		Persona p5 = new Persona(5, "pepe");
+
+		Persona p6 = new Persona(6, "pepe");
+		// ejecucion
+
+		// verificacion
+		assertTrue(automovil.asignarChofer(p1));
+
+		assertTrue(automovil.agregarAcompaniante(p2));
+		assertTrue(automovil.agregarAcompaniante(p3));
+		assertTrue(automovil.agregarAcompaniante(p4));
+
+		automovil.agregarAcompaniante(p6);
+	}
+
+}

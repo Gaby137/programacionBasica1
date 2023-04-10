@@ -1,0 +1,9 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class Persona {
+
+	public Persona(String nombre, int dni, int edad) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

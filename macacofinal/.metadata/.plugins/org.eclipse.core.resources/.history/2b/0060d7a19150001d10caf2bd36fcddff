@@ -1,0 +1,38 @@
+package ar.edu.unlam.pb2.eva03;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class CompaniaDeSeguro {
+
+	private String nombre;
+	private Set<Poliza> listaDePolizas;
+
+	public CompaniaDeSeguro(String nombre) {
+		super();
+		this.nombre = nombre;
+		this.listaDePolizas = new HashSet<>();
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Set<Poliza> getListaDePolizas() {
+		return listaDePolizas;
+	}
+
+	public void setListaDePolizas(Set<Poliza> listaDePolizas) {
+		this.listaDePolizas = listaDePolizas;
+	}
+
+	public void agregarPoliza(Poliza poliza) {
+		this.listaDePolizas.add(poliza);
+
+	}
+
+}

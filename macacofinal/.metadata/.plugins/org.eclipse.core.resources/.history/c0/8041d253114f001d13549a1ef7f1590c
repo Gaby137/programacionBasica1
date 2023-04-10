@@ -1,0 +1,21 @@
+package ar.edu.hospital;
+
+public class Ciliaco extends Paciente {
+
+	public Ciliaco(Integer dni, String nombre) {
+		super(dni, nombre);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Boolean alimentar(Plato plato) {
+		Boolean alimentar = false;
+		for (Ingrediente ingrediente : plato.getListaDeIngredientes()) {
+			if (ingrediente.getNombre().equals("azucar")) {
+				alimentar = true;
+			}
+		}
+		return alimentar;
+	}
+
+}

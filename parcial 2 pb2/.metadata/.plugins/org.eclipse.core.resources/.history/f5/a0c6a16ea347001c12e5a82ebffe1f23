@@ -1,0 +1,47 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class SegurosGenerales {
+	public static final int getNumeroDePoliza = 0;
+	private Auto auto;
+	private int numeroDePoliza;
+	private Persona asegurado;
+	private Double premio;
+
+	public void agregarBienAsegurado(Auto auto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Auto getAuto() {
+		return auto;
+	}
+
+	public void setAuto(Auto auto) {
+		this.auto = auto;
+	}
+
+	public int getNumeroDePoliza() {
+		return numeroDePoliza;
+	}
+
+	public void setNumeroDePoliza(int numeroDePoliza) {
+		this.numeroDePoliza = numeroDePoliza;
+	}
+
+	public Persona getAsegurado() {
+		return asegurado;
+	}
+
+	public void setAsegurado(Persona asegurado) {
+		this.asegurado = asegurado;
+	}
+
+	public Double getPremio() {
+		return premio;
+	}
+
+	public void setPremio(Double premio) {
+		this.premio = premio;
+	}
+
+}

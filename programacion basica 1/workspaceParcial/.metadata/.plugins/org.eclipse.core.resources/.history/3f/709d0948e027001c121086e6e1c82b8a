@@ -1,0 +1,18 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public enum TipoDeZona {
+//	60ppm - 50%
+	Descanso,
+
+//	50% - 60%		: es una zona de calentamiento, rehabilitación, acondicionamiento, aeróbico inicial… un ritmo muy fácil.
+	Calentamiento,
+
+//	60% - 80%		: zona de intensidad ligera, ritmo fácil, cómodo, representa un entrenamiento cardiovascular básico, pudiendo hablar con comodidad.
+	Aerobico,
+
+//	80% - 90%
+	Umbral,
+
+//	90% - 100%
+	Maximo;
+}

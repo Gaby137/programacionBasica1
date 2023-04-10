@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;estado&apos; in &apos;ar.edu.unlam.pb1.Televisor&apos; to &apos;encendido&apos;&#x0D;&#x0A;- Original project: &apos;ProyectoTelevisor&apos;&#x0D;&#x0A;- Original element: &apos;ar.edu.unlam.pb1.Televisor.estado&apos;&#x0D;&#x0A;- Renamed element: &apos;ar.edu.unlam.pb1.Televisor.encendido&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;estado&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;ar.edu.unlam.pb1{Televisor.java[Televisor^estado" name="encendido" references="true" setter="false" stamp="1621285874123" textual="false" version="1.0"/>
+</session>

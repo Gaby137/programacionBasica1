@@ -1,0 +1,15 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class SegurosGenerales extends Poliza {
+
+	public SegurosGenerales(Integer NUMERO_DE_POLIZA, Persona asegurado, Double SUMA_ASEGURADA, Double PRIMA) {
+		super(NUMERO_DE_POLIZA, asegurado, SUMA_ASEGURADA, PRIMA);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void agregarBienAsegurado(Auto auto) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

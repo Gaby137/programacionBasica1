@@ -1,0 +1,16 @@
+package ar.edu.unlam.pbII.cuenta;
+
+public class Banco {
+
+	private Cliente [] clientes;
+	private Cuenta [] cuentas;
+	
+	public Banco() {
+		this.clientes = new Cliente[1000];
+		this.cuentas = new Cuenta[5000];
+	}
+	
+	public Boolean agregarCliente (Cliente cliente) {
+		return true;
+	}
+}

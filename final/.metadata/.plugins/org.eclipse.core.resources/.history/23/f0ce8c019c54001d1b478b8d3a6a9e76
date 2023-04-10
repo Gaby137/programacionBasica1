@@ -1,0 +1,36 @@
+package ar.edu.panini;
+
+import java.util.Set;
+
+public class Panini {
+	private Set<Usuario> listaDeUsuarios;
+	private String nombre;
+	public Panini(Set<Usuario> listaDeUsuarios, String nombre) {
+		super();
+		this.listaDeUsuarios = listaDeUsuarios;
+		this.nombre = nombre;
+	}
+	
+	public Boolean agregarUsuario(Usuario user) {
+		return this.listaDeUsuarios.add(user);
+	}
+	
+	
+	
+	
+	
+	public Set<Usuario> getListaDeUsuarios() {
+		return listaDeUsuarios;
+	}
+	public void setListaDeUsuarios(Set<Usuario> listaDeUsuarios) {
+		this.listaDeUsuarios = listaDeUsuarios;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+}

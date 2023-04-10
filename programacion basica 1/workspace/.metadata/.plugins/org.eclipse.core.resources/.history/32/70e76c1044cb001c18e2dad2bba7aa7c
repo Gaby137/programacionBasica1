@@ -1,0 +1,10 @@
+package ar.edu.futsal;
+
+import java.util.List;
+
+public class Equipo {
+	private List<Jugador> listaJugadores;
+	private List<Evento> goles;
+	private List<Evento> amonestado;
+	private List<Evento> expulsados;
+}

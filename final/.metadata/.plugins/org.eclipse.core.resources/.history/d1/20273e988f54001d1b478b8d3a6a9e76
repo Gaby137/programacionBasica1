@@ -1,0 +1,9 @@
+package ar.edu.panini;
+
+import java.util.List;
+import java.util.Set;
+
+public class Final extends Usuario {
+	private List<Figurita> stock;
+	private Set<Figurita> album;
+}

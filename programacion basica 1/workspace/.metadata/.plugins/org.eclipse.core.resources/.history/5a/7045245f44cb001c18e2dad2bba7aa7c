@@ -1,0 +1,6 @@
+package ar.edu.futsal;
+
+public class Partido {
+	
+	private Equipo local = new Equipo();
+}

@@ -1,0 +1,16 @@
+package ar.edu.unlam.pbII.cuenta;
+
+public class CuentaSueldo extends Cuenta{
+
+	public CuentaSueldo(Integer cbu, Double saldo) {
+		super(cbu, saldo);
+		setTipoCuenta(TipoCuenta.CAJA_AHORRO);
+	}
+
+	@Override
+	public TipoCuenta getTipoCuenta() {
+		
+		return tipoCuenta.;
+	}
+
+}

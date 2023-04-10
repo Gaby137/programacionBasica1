@@ -1,0 +1,99 @@
+package ar.edu.unlam.pb2.smartwatch.deportista;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import ar.edu.unlam.pb2.smartwatch.sensor.Brazada;
+import ar.edu.unlam.pb2.smartwatch.sensor.Paso;
+
+public class TestNadador {
+
+	@Test
+	public void queSePuedaInstanciarUnNadador() {
+
+		final String NOMBRE_ESPERADO = "Phelps";
+		final Integer EDAD_ESPERADA = 30;
+		final Double PESO_ESPERADO = 75.80;
+		final Double ALTURA_ESPERADA = 177.4;
+
+		Nadador nadador = new Nadador(NOMBRE_ESPERADO, EDAD_ESPERADA, PESO_ESPERADO, ALTURA_ESPERADA);
+
+		assertEquals(NOMBRE_ESPERADO, nadador.getNombre());
+		assertEquals(EDAD_ESPERADA, nadador.getEdadActual(), 0.0);
+		assertEquals(PESO_ESPERADO, nadador.getPesoActual(), 0.0);
+		assertEquals(ALTURA_ESPERADA, nadador.getAlturaActual(), 0.0);
+
+	}
+	
+	@Test
+	public void queSePuedaCalcularDistanciaEnMetrosNadador() {
+
+		// preparacion
+		Nadador usuario = new Nadador();
+
+		final Integer BRAZADAS_DE_PRUEBA = 10;
+
+		Brazada sensorDeBrazadas = new Brazada(100.0);
+		for (int i = 0; i < BRAZADAS_DE_PRUEBA; i++) {
+			sensorDeBrazadas.darUnaBrazada();
+		}
+		// valor esperado distancia en metros
+
+		final Double RESULTADO_ESPERADO = 10D;
+
+		// ejecucion
+
+		Double valorObtenido = usuario.distanciaRecorrida(sensorDeBrazadas.getContBrazada(), Brazada.LONGITUD_DE_BRAZADA);
+
+		// validacion
+
+		assertEquals(RESULTADO_ESPERADO, valorObtenido, 0.01);
+	}
+	
+	@Test 
+	public void queSePuedaCalcularTiempoTranscurridoNadador() {
+		// preparacion
+				Nadador usuario = new Nadador();
+
+				final Integer BRAZADAS_DE_PRUEBA = 150;
+
+				Brazada sensorDeBrazadas = new Brazada(100);
+				for (int i = 0; i < BRAZADAS_DE_PRUEBA; i++) {
+					sensorDeBrazadas.darUnaBrazada();
+				}
+				// valor esperado distancia en metros
+
+				final Double RESULTADO_ESPERADO =2.5;
+
+				// ejecucion
+
+				Double valorObtenido = usuario.tiempoTrascurrido(sensorDeBrazadas.getContBrazada());
+
+				// validacion
+
+				assertEquals(RESULTADO_ESPERADO, valorObtenido, 0.01);
+			}
+	
+	@Test
+	public void queSePuedaCalcularRitmoNadador() {
+		// preparacion
+				Nadador usuario = new Nadador();
+
+				usuario.setDistanciaEnMts(45.5);
+				usuario.setTiempoTranscurrido(15D);
+				// valor esperado distancia en metros
+
+				final Double RESULTADO_ESPERADO =3.033;
+
+				// ejecucion
+
+				Double valorObtenido = usuario.calcularElRitmo();
+
+				// validacion
+
+				assertEquals(RESULTADO_ESPERADO, valorObtenido, 0.01);
+			}
+	}
+
+

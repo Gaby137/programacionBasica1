@@ -1,0 +1,10 @@
+package ar.edu.panini;
+
+import java.util.Set;
+
+public class Panini {
+	private Set<Usuario> listaDeUsuarios;
+	private String nombre;
+	
+	
+}

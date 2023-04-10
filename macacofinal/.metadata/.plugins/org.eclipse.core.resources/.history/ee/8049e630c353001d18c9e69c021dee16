@@ -1,0 +1,12 @@
+package ar.edu.unlam.pb2.eva02;
+
+public class Acuatico extends Vehiculo {
+	private Double profundidad;
+
+	public Acuatico(Integer codigo, String modelo, Double profundidad) {
+		super(codigo, modelo);
+		this.profundidad = profundidad;
+	}
+	
+	
+}

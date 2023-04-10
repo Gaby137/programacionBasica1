@@ -1,0 +1,129 @@
+package ar.edu.central;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
+import java.util.Collections;
+
+import org.junit.Test;
+
+public class PruebaCentral {
+
+	@Test
+	public void queSePuedaRegistrarUnaAlarmaEnLaCentral() {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "321", "alarmaSus");
+		Administrable user1 = new Usuario(777, "pepe");
+		// ejecucion
+		user1.agregarAlarma(a1, c1);
+		// comprobacion
+		assertEquals(1, c1.getListaAlarmas().size());
+	}
+
+	@Test
+	public void queSePuedaAgregarUnUsuarioConfiguradorAUnaAlarma() throws CodigoAlarmaIncorrectoException {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "321", "alarmaSus");
+		Administrable user1 = new Usuario(666, "diego");
+		Configurable user2 = new Usuario(777, "pepe");
+		// ejecucion
+		user1.agregarUsuario((Usuario) user2, c1);
+		user1.agregarAlarma(a1, c1);
+		user2.agregarUsuarioAUnaAlarma(777, 1, "321", c1);
+		// comprobacion
+		assertEquals(1, a1.getListaUsuariosValidos().size());
+
+	}
+
+	@Test(expected = CodigoAlarmaIncorrectoException.class)
+	public void alAgregarUnUsuarioAUnaAlarmaConCodigoDeConfiguracionDeAlarmaInvalidoSeLanceCodigoAlarmaIncorrectoException()
+			throws CodigoAlarmaIncorrectoException {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "6548", "alarmaSus");
+		Administrable user1 = new Usuario(666, "diego");
+		Configurable user2 = new Usuario(777, "pepe");
+		// ejecucion
+		user1.agregarUsuario((Usuario) user2, c1);
+		user1.agregarAlarma(a1, c1);
+		user2.agregarUsuarioAUnaAlarma(777, 1, "321", c1);
+		// comprobacion
+		// assertEquals(1, a1.getListaUsuariosValidos().size());
+
+	}
+
+	@Test(expected = SensorDuplicadoException.class)
+	public void alAgregarUnSensorDuplicadoEnUnaAlarmaSeLanceUnaSensorDuplicadoException()
+			throws CodigoAlarmaIncorrectoException, SensorDuplicadoException {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "321", "alarmaSus");
+		Sensor s1 = new Sensor(1, true);
+		Administrable user1 = new Usuario(666, "diego");
+		Configurable user2 = new Usuario(777, "pepe");
+		// ejecucion
+		user1.agregarUsuario((Usuario) user2, c1);
+		user1.agregarAlarma(a1, c1);
+		user2.agregarUsuarioAUnaAlarma(777, 1, "321", c1);
+		user2.agregarSensorAAlarma(1, "321", s1, 777, c1);
+		user2.agregarSensorAAlarma(1, "321", s1, 777, c1);
+
+		// comprobacion
+
+	}
+
+	@Test
+	public void queNoSePuedaActivarUnaAlarmaSiHayAlMenosUnSensorDesactivado()
+			throws CodigoAlarmaIncorrectoException, SensorDuplicadoException {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "321", "alarmaSus");
+		Administrable user1 = new Usuario(666, "diego");
+		Configurable user2 = new Usuario(777, "pepe");
+		Activable user = new Usuario(888, "marian");
+		Sensor s1 = new Sensor(1, true);
+		Sensor s2 = new Sensor(2, false);
+		Sensor s3 = new Sensor(3, true);
+		// ejecucion
+		user1.agregarUsuario((Usuario) user, c1);
+		user1.agregarUsuario((Usuario) user2, c1);
+		user1.agregarAlarma(a1, c1);
+		user2.agregarUsuarioAUnaAlarma(777, 1, "321", c1);
+		user2.agregarUsuarioAUnaAlarma(888, 1, "321", c1);
+		user2.agregarSensorAAlarma(1, "321", s1, 777, c1);
+		user2.agregarSensorAAlarma(1, "321", s2, 777, c1);
+		user2.agregarSensorAAlarma(1, "321", s3, 777, c1);
+		// comprobacion
+		assertFalse(user.activarDesactivarAlarma(a1, "123"));
+	}
+
+	@Test
+	public void queParaUnaAlarmaDeterminadaSePuedaObtenerUnaColeccionOrdenadaDeAcccionesDeTipoConfiguracionOdenadasPorIdDeAccion()
+			throws CodigoAlarmaIncorrectoException, SensorDuplicadoException {
+		// instanciacion
+		CentralDeAlarma c1 = new CentralDeAlarma("central");
+		Alarma a1 = new Alarma(1, "123", "321", "alarmaSus");
+		Administrable user1 = new Usuario(666, "diego");
+		Configurable user2 = new Usuario(777, "pepe");
+		Activable user = new Usuario(888, "marian");
+		Sensor s1 = new Sensor(1, true);
+		Sensor s2 = new Sensor(2, true);
+		Sensor s3 = new Sensor(3, true);
+		Collections.sort(a1.getListaAccionesRealizadas());
+		// ejecucion
+		user1.agregarUsuario((Usuario) user, c1);
+		user1.agregarUsuario((Usuario) user2, c1);
+		user1.agregarAlarma(a1, c1);
+		user2.agregarUsuarioAUnaAlarma(777, 1, "321", c1);
+		user2.agregarUsuarioAUnaAlarma(888, 1, "321", c1);
+		user2.agregarSensorAAlarma(1, "321", s1, 777, c1);
+		user2.agregarSensorAAlarma(1, "321", s2, 777, c1);
+		user2.agregarSensorAAlarma(1, "321", s3, 777, c1);
+		// comprobacion
+
+		assertEquals(5, user2.obtenerListaDeConfigurables(a1).size());
+
+	}
+}

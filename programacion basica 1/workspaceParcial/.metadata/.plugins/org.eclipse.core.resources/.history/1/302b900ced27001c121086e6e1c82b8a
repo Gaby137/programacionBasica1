@@ -1,0 +1,78 @@
+package ar.edu.unlam.pb2.smartwatch;
+
+public class ZonaDeFrecuenciaCardiaca {
+	private static final Double KARVONEN_220 = 220.0;
+	private Double frecuenciaCardiacaMin;
+	private Double frecuenciaCardiacaMax;
+	private TipoDeZona tipoZona;
+
+	public TipoDeZona getTipoZona() {
+		return tipoZona;
+	}
+
+	public void setTipoZona(TipoDeZona tipoZona) {
+		this.tipoZona = tipoZona;
+	}
+
+	public void calcularZonaFrecuenciaCardiacaActual(Integer edad, Integer frecuenciaCardiaca) {
+		Double FCMaxPersona = KARVONEN_220 * edad;
+
+//		60ppm - 50%  
+		if (frecuenciaCardiaca >= 60 && frecuenciaCardiaca < (FCMaxPersona * 0.5)) {
+			this.tipoZona = TipoDeZona.DESCANSO;
+			this.frecuenciaCardiacaMin = 60.0;
+			this.frecuenciaCardiacaMax = (FCMaxPersona * 0.5) - 1;
+		}
+//		50% - 60% : es una zona de calentamiento, rehabilitación, acondicionamiento, aeróbico inicial… un ritmo muy fácil.
+		if (frecuenciaCardiaca >= (FCMaxPersona * 0.5) && frecuenciaCardiaca < (FCMaxPersona * 0.6)) {
+			this.tipoZona = TipoDeZona.CALENTAMIENTO;
+			this.frecuenciaCardiacaMin = (FCMaxPersona * 0.5);
+			this.frecuenciaCardiacaMax = (FCMaxPersona * 0.6) - 1;
+		}
+
+//		60% - 80% : zona de intensidad ligera, ritmo fácil, cómodo, representa un entrenamiento cardiovascular básico, 
+//		pudiendo hablar con comodidad.la zona aeróbica con ritmo moderado en la que se realiza un trabajo de  calidad
+//		para el sistema cardiovascular. Aquí la respiración es agitada y es más complicado mantener una conversación.
+		if (frecuenciaCardiaca >= (FCMaxPersona * 0.6) && frecuenciaCardiaca < (FCMaxPersona * 0.8)) {
+			this.tipoZona = TipoDeZona.AEROBICO;
+			this.frecuenciaCardiacaMin = (FCMaxPersona * 0.6);
+			this.frecuenciaCardiacaMax = (FCMaxPersona * 0.8) - 1;
+		}
+//		80% - 90%      : terreno de umbral anaeróbico, la intensidad es mayor con el objetivo de mejorar el rendimiento
+//		y la respiración es forzada.
+		if (frecuenciaCardiaca >= (FCMaxPersona * 0.8) && frecuenciaCardiaca < (FCMaxPersona * 0.9)) {
+			this.tipoZona = TipoDeZona.UMBRAL;
+			this.frecuenciaCardiacaMin = (FCMaxPersona * 0.8);
+			this.frecuenciaCardiacaMax = (FCMaxPersona * 0.9) - 1;
+		}
+
+//		90% - 100%	 :la FCmax del persona segun la edad, la zona de máximo esfuerzo e intensidad que podemos soportar.
+		if (frecuenciaCardiaca >= (FCMaxPersona * 0.9) && frecuenciaCardiaca < FCMaxPersona ) {
+			this.tipoZona = TipoDeZona.UMBRAL;
+			this.frecuenciaCardiacaMin = (FCMaxPersona * 0.8);
+			this.frecuenciaCardiacaMax = FCMaxPersona ;
+		}
+
+	}
+
+	public Double calcularFrecuenciaCardiacaMaximaDeportista(Integer edad) {
+		return KARVONEN_220 * edad;
+	}
+
+	public Double getFrecuenciaCardiacaMin() {
+		return this.frecuenciaCardiacaMin;
+	}
+
+	public void setFrecuenciaCardiacaMin(Double frecuenciaCardiacaMin) {
+		this.frecuenciaCardiacaMin = frecuenciaCardiacaMin;
+	}
+
+	public Double getFrecuenciaCardiacaMax() {
+		return this.frecuenciaCardiacaMax;
+	}
+
+	public void setFrecuenciaCardiacaMax(Double frecuenciaCardiacaMax) {
+		this.frecuenciaCardiacaMax = frecuenciaCardiacaMax;
+	}
+
+}

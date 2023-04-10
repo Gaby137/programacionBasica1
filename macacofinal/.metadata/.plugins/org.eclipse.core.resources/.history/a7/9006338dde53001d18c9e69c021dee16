@@ -1,0 +1,6 @@
+package ar.edu.banco;
+
+public abstract class Cuenta {
+	private Long cbu;
+	private Double saldo;
+}

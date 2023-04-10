@@ -1,0 +1,9 @@
+package ar.edu.unlam.pb2.eva03;
+
+public class Vivienda {
+
+	public Vivienda(String string, String string2, String string3, String string4) {
+		// TODO Auto-generated constructor stub
+	}
+
+}
